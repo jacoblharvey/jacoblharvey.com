@@ -48,6 +48,7 @@ These steps assume you are running Apache HTTP Server[^httpd] via MAMP[^mamp] on
 - [HTML Tutorial](https://www.w3schools.com/html/default.asp)
 - [Ready to check - Nu Html Checker](https://validator.w3.org/nu/)
 - [favicon.ico Generator](https://www.favicon.cc/)
+- [CodePen](https://codepen.io/)
 
 ### Inspiration
 - [Hypertext Gardens](http://www.eastgate.com/garden/Enter.html)
