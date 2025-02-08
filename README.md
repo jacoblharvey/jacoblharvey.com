@@ -10,18 +10,18 @@ These steps assume you are running Apache HTTP Server[^httpd] via MAMP[^mamp] on
 #### Enable Server Side Includes (SSI)
 1. Edit `httpd.conf` (default `/Applications/MAMP/conf/apache/`)
 
-    Search for the following **Ln 598-599** and uncomment them:    
+    Search for the following Ln 598-599 and uncomment them
     ```apache
     AddType text/html .shtml
     AddOutputFilter INCLUDES .shtml
     ```
     
-    Search for the following **Ln 111** and uncomment it:
+    Search for the following Ln 111 and uncomment it
     ```apache
     LoadModule include_module modules/mod_include.so
     ```
 
-1. Write the following lines to `.htaccess` in your document root (default `/Applications/MAMP/htdocs/`):
+1. Write the following lines to `.htaccess` in your document root (default `/Applications/MAMP/htdocs/`)
     ```apache
     AddType text/html .shtml
     AddHandler server-parsed .html
@@ -29,16 +29,14 @@ These steps assume you are running Apache HTTP Server[^httpd] via MAMP[^mamp] on
     Options Indexes FollowSymlinks Includes
     ```
 
-1. Restart MAMP if it's running
+1. Restart your server
 
 1. Add a `<base>` tag to your document `<head>` and set the `href` attribute to the desired base URL
-
     ```html
     <base href="/path/from/document/root/"
     ```
 
 1. SSI directives[^ssi] can now be used
-
     ```html
     <!--#include virtual="path/to/footer.html" -->
     ```
