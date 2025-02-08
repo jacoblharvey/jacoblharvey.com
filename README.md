@@ -41,6 +41,49 @@ These steps assume you are running Apache HTTP Server[^httpd] via MAMP[^mamp] on
     <!--#include virtual="path/to/footer.html" -->
     ```
 
+#### Enable Name-Based Virtual Hosts
+1. Edit your host database at `/etc/hosts` and append your desired hostname to the IP for localhost
+    ```conf
+    127.0.0.1 localhost your_hostname
+    ```
+
+1. Edit `httpd.conf` (default `/Applications/MAMP/conf/apache/`)
+
+    Search for the following Ln 667 and uncomment it
+    ```apache
+    # Virtual hosts
+    Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
+    ```
+
+    Search for the following Ln 275 and change `AllowOverride None` to `AllowOverride All`
+    ```apache
+    <Directory />
+        Options Indexes FollowSymLinks
+        AllowOverride All
+    </Directory>
+    ```
+
+1. Edit `httpd-vhosts.conf` (default `/Applications/MAMP/conf/apache/extra/`)
+
+    Replace the two VirtualHost examples with your desired configurations[^vhost]
+    ```conf
+    <VirtualHost *:8888>
+        DocumentRoot "/Applications/MAMP/htdocs"
+        ServerName localhost
+    </VirtualHost>
+
+    <VirtualHost *:8888>
+        DocumentRoot "/path/to/document/root"
+        ServerName your_hostname
+    </VirtualHost>
+    ```
+
+    Note that MAMP's default port for Apache is `8888`
+
+1. Restart your server
+
+1. Your virtual hosts can now be accessed at their corresponding hostnames
+
 ## References and Further Reading
 ### Docs and Tools
 - [HTML Tutorial](https://www.w3schools.com/html/default.asp)
@@ -51,7 +94,9 @@ These steps assume you are running Apache HTTP Server[^httpd] via MAMP[^mamp] on
 ### Inspiration
 - [Hypertext Gardens](http://www.eastgate.com/garden/Enter.html)
 - [MaggieAppleton/digital-gardeners: Resources, links, projects, and ideas for gardeners tending their digital notes on the public interwebs](https://github.com/MaggieAppleton/digital-gardeners)
+- [Introduction to the Zettelkasten Method &bull; Zettelkasten Method](https://zettelkasten.de/introduction/)
 
 [^httpd]: [Welcome! - The Apache HTTP Server Project](https://httpd.apache.org)
 [^mamp]: [MAMP &amp; MAMP PRO for macOS – Local Web Development Environment for PHP, MySQL &amp; Apache](https://www.mamp.info/en/mac/)
 [^ssi]: [Apache httpd Tutorial: Introduction to Server Side Includes - Apache HTTP Server Version 2.4](https://httpd.apache.org/docs/2.4/howto/ssi.html)
+[^vhost]: [Name-based Virtual Host Support - Apache HTTP Server Version 2.4](https://httpd.apache.org/docs/2.4/vhosts/name-based.html)
