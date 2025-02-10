@@ -1,0 +1,14 @@
+name: Deploy
+on: workflow_dispatch
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          port: ${{ secrets.PORT }}
+          script: whoami
