@@ -1,7 +1,10 @@
 name: Deploy
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+  release:
+    types: [ published ]
 jobs:
-  deploy:
+  Deploy:
     runs-on: ubuntu-22.04
     steps:
       - name: SSH
@@ -12,5 +15,7 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            whoami
-            ls -al
+            cd ${{ secrets.PATH }}
+            git pull --tags origin release
+            git checkout $(git describe --tags $(git rev-list --tags --max-count=1))
+            git status
