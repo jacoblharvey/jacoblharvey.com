@@ -86,7 +86,6 @@ These steps assume you are running Apache HTTP Server[^httpd] via MAMP[^mamp] on
 ## References and Further Reading
 ### Docs and Tools
 - [The W3C Markup Validation Service](https://validator.w3.org/)
-- [favicon.ico Generator](https://www.favicon.cc/)
 - [CodePen](https://codepen.io/)
 - [regex101: build, test, and debug regex](https://regex101.com)
 - [SSL Server Test (Powered by Qualys SSL Labs)](https://www.ssllabs.com/ssltest/)
