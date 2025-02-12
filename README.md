@@ -1,7 +1,6 @@
-# Digital Garden
 This website is a term project for CSCE 464.
 
-The goal of this project is to create a digital garden that will evolve as I learn HTML, CSS, JavaScript, and PHP.
+The goal of this project is to create a personal site that will evolve as I learn HTML, CSS, JavaScript, and PHP.
 
 ## Dev Setup
 ### Apache HTTP Server
