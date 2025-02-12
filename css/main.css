@@ -38,6 +38,12 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
+.last-modified {
+  font-size: 12px;
+  text-align: right;
+  margin-top: 16px;
+}
+
 .title {
   font-weight: bold;
   text-align: center;
