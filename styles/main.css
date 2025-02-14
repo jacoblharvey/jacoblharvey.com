@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  font-size: 16px;
   font-weight: normal;
   background-color: #FFFFFF;
   color: #353535;
@@ -45,8 +46,25 @@ nav ul li a:hover {
 }
 
 .title {
+  border: none;
   font-weight: bold;
   text-align: center;
+  color: #3A5A40;
+}
+
+.subtitle {
+  border: none;
+  font-weight: bold;
+  text-align: left;
+  color: #3A5A40;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #3A5A40;
+  height: 2px;
+  color: #3A5A40;
+  overflow: visible;
 }
 
 main {
