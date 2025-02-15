@@ -59,7 +59,7 @@ These steps assume you are running Apache HTTP Server[^httpd] via MAMP[^mamp] on
 1. Edit `httpd-vhosts.conf` (default `/Applications/MAMP/conf/apache/extra/`)
 
     Replace the two VirtualHost examples with your desired configurations[^vhost]
-    ```conf
+    ```apache
     <VirtualHost *:8888>
         ServerName localhost
         DocumentRoot "/Applications/MAMP/htdocs"
@@ -85,14 +85,15 @@ These steps assume you are running Apache HTTP Server[^httpd] via MAMP[^mamp] on
 
 ## References and Further Reading
 ### Docs and Tools
-- [The W3C Markup Validation Service](https://validator.w3.org/)
 - [CodePen](https://codepen.io/)
-- [regex101: build, test, and debug regex](https://regex101.com)
-- [SSL Server Test (Powered by Qualys SSL Labs)](https://www.ssllabs.com/ssltest/)
-- [Git - Reference](https://git-scm.com/docs)
-- [Semantic Versioning 2.0.0 | Semantic Versioning](https://semver.org)
-- [Freenom - A Name for Everyone](https://www.freenom.com/)
 - [Coolors - The super fast color palettes generator!](https://coolors.co)
+- [Favicon Generator for perfect icons on all browsers](https://realfavicongenerator.net)
+- [Freenom - A Name for Everyone](https://www.freenom.com/)
+- [Git - Reference](https://git-scm.com/docs)
+- [regex101: build, test, and debug regex](https://regex101.com)
+- [Semantic Versioning 2.0.0 | Semantic Versioning](https://semver.org)
+- [SSL Server Test (Powered by Qualys SSL Labs)](https://www.ssllabs.com/ssltest/)
+- [The W3C Markup Validation Service](https://validator.w3.org/)
 
 ### Inspiration
 - [Hypertext Gardens](http://www.eastgate.com/garden/Enter.html)
