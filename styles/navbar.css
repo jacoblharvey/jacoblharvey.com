@@ -1,0 +1,97 @@
+/* navbar.css */
+nav {
+  width: 100%;
+  background-color: #F6F5F1;
+  display: inline-block;
+  line-height: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 12px 0;
+  padding: 0;
+  float: right;
+}
+
+nav ul li:first-child {
+/*   margin: 0 16px 0 0; */
+  margin-right: 16px;
+}
+
+nav ul li:last-child {
+/*   margin: 0 0 0 16px; */
+  margin-left: 16px;
+}
+
+.home {
+  float: left;
+}
+
+nav ul li a {
+  display: inline-block;
+  color: #353535;
+  text-align: center;
+  margin: 12px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-button {
+  position: relative;
+  background: #F6F5F1;
+  color: #353535;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+}
+
+.dropdown-button:hover {
+  background-color: #FFFFFF;  
+}
+
+.dropdown-content {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(0rem);
+  transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
+  right: 0;
+  width: 100px;
+  background: #F6F5F1;
+  border-radius: 8px;
+  margin: 0;
+}
+
+.dropdown-content a {
+  text-align: left;
+  width: 84%;
+  line-height: normal;
+  padding: 8px;
+  margin: 0;
+}
+
+.dropdown-content a:hover {
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0.5rem);
+}
+
+.dropdown-arrow {
+  transform: rotate(180deg);
+}
