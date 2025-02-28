@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  box-sizing:border-box;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -77,18 +77,22 @@ nav ul li.dropdown {
 
 .last-modified {
   text-align: right;
-  margin-top: 16px;
+  margin: 12px 0 0;
 }
 
 .title {
+  margin: 12px 0 0;
   border: none;
+  font-size: 32px;
   font-weight: bold;
   text-align: center;
   color: #3A5A40;
 }
 
 .subtitle {
+  margin: 12px 0 0;
   border: none;
+  font-size: 24px;
   font-weight: bold;
   text-align: left;
   color: #3A5A40;
@@ -122,10 +126,6 @@ main {
   display: flex;
 }
 
-.column {
-  padding: 0 10px;
-}
-
 .contents,
 .spacer {
    -webkit-flex: 1;
@@ -141,7 +141,10 @@ article {
 
 footer {
   background-color: #F6F5F1;
-  padding: 5px;
   text-align: center;
-  font-size: 12px;
+}
+
+footer p {
+  margin: 0;
+  padding: 8px
 }
