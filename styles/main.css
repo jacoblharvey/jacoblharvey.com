@@ -94,12 +94,22 @@ nav ul li.dropdown {
   color: #3A5A40;
 }
 
-hr {
-  border: none;
-  border-top: 2px solid #3A5A40;
-  height: 2px;
-  color: #3A5A40;
-  overflow: visible;
+.separator {
+    margin: 16px 0 0 0;
+    border: none;
+    border-top: 4px double #3A5A40;
+    color: #3A5A40;
+    overflow: visible;
+    text-align: center;
+    height: 6px;
+}
+
+.separator:after {
+    background: #FFFFFF;
+    content: '§';
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
 }
 
 header {
