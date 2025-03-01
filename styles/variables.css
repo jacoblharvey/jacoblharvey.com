@@ -1,0 +1,17 @@
+:root {
+  /* Hex codes */
+  --white: #FFFFFF;
+  --isabelline: #F4F0EC;
+  --black: #000000;
+  --eerie-black: #1B1B1B;
+  --jet-black: #343434;
+  --blue: #2F4450;
+  --green: #34502F;
+  --violet: #4B2F50;
+  --brown: #503B2F;
+  /* Semantic variables */
+  --bg-color: var(--white);
+  --bg-accent-color: var(--isabelline);
+  --text-color: var(--eerie-black);
+  --shadow:rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+}

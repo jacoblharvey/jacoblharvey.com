@@ -1,7 +1,7 @@
 /* navbar.css */
 nav {
   width: 100%;
-  background-color: #F6F5F1;
+  background-color: var(--bg-accent-color);
   display: inline-block;
   line-height: 0;
 }
@@ -19,22 +19,17 @@ nav ul li {
 }
 
 nav ul li:first-child {
-/*   margin: 0 16px 0 0; */
   margin-right: 16px;
 }
 
 nav ul li:last-child {
-/*   margin: 0 0 0 16px; */
   margin-left: 16px;
-}
-
-.home {
   float: left;
 }
 
 nav ul li a {
   display: inline-block;
-  color: #353535;
+  color: var(--text-color);
   text-align: center;
   margin: 12px 16px;
   text-decoration: none;
@@ -50,15 +45,19 @@ nav ul li a:hover {
 
 .dropdown-button {
   position: relative;
-  background: #F6F5F1;
-  color: #353535;
+  background: var(--bg-accent-color);
+  color: var(--text-color);
   cursor: pointer;
   border-radius: 8px;
   border: none;
+  padding: 0;
+  height: 24px;
+  width: 24px;
 }
 
 .dropdown-button:hover {
-  background-color: #FFFFFF;  
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow);
 }
 
 .dropdown-content {
@@ -68,10 +67,11 @@ nav ul li a:hover {
   transform: translateY(0rem);
   transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
   right: 0;
-  width: 100px;
-  background: #F6F5F1;
+  width: 101.3667px;
+  background: var(--bg-accent-color);
   border-radius: 8px;
   margin: 0;
+  box-shadow: var(--shadow);
 }
 
 .dropdown-content a {
@@ -80,18 +80,34 @@ nav ul li a:hover {
   line-height: normal;
   padding: 8px;
   margin: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-clip: padding-box;
+}
+
+.dropdown-content a:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+.dropdown-content a:last-child {
+  border-radius: 0 0 8px 8px;
+  border: none;
 }
 
 .dropdown-content a:hover {
-  background: #FFFFFF;
-  border-radius: 8px;
+  background-color: var(--bg-color);
 }
+
 .show {
   visibility: visible;
   opacity: 1;
   transform: translateY(0.5rem);
 }
 
-.dropdown-arrow {
+.drop {
   transform: rotate(180deg);
+}
+
+.highlight {
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow);
 }
