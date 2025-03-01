@@ -5,7 +5,8 @@ const toggleArrow = document.getElementById("dropdown-arrow");
 // Toggle dropdown function
 const toggleDropdown = () => {
   dropdownContent.classList.toggle("show");
-  toggleArrow.classList.toggle("dropdown-arrow");
+  toggleArrow.classList.toggle("drop");
+  dropdownButton.classList.toggle("highlight");
 };
 
 // Toggle dropdown open/close when dropdown button is clicked
