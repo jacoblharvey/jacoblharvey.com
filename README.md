@@ -2,6 +2,9 @@ This website is a term project for CSCE 464.
 
 The goal of this project is to create a personal site that will evolve as I learn HTML, CSS, JavaScript, and PHP.
 
+## Site Status
+[![Deploy](https://github.com/jharvey25/jacoblharvey.com/actions/workflows/deploy.yml/badge.svg?event=release)](https://github.com/jharvey25/jacoblharvey.com/actions/workflows/deploy.yml)
+
 ## Dev Setup
 ### Apache HTTP Server
 These steps assume you are running Apache HTTP Server[^httpd] via MAMP[^mamp] on macOS.
@@ -90,6 +93,7 @@ These steps assume you are running Apache HTTP Server[^httpd] via MAMP[^mamp] on
 - [Favicon Generator for perfect icons on all browsers](https://realfavicongenerator.net)
 - [Freenom - A Name for Everyone](https://www.freenom.com/)
 - [Git - Reference](https://git-scm.com/docs)
+- [Minify JS / CSS - JavaScript and CSS Minifier / Compressor](https://www.minifier.org/)
 - [regex101: build, test, and debug regex](https://regex101.com)
 - [Semantic Versioning 2.0.0 | Semantic Versioning](https://semver.org)
 - [SSL Server Test (Powered by Qualys SSL Labs)](https://www.ssllabs.com/ssltest/)
