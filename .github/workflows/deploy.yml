@@ -17,8 +17,4 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.KEY }}
           envs: DIR
-          script: |
-            cd $(echo $DIR | tr -d '\r')
-            git pull --tags origin release
-            git checkout $(git describe --tags $(git rev-list --tags --max-count=1))
-            git status
+          script: "cd $(echo $SSH_DIR | tr -d '\r') && git pull --tags origin release && git checkout $(git describe --tags $(git rev-list --tags --max-count=1)) && git status"
