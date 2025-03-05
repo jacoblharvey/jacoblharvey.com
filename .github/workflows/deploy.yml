@@ -8,13 +8,24 @@ jobs:
     name: SSH
     runs-on: ubuntu-22.04
     steps:
-      - name: Checkout latest tag
-        uses: appleboy/ssh-action@v1.2.1
+      - name: Configure
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_KEY" > ~/.ssh/deploy.key
+          chmod 600 ~/.ssh/deploy.key
+          cat >>~/.ssh/config <<END
+          Host deploy
+            HostName $SSH_HOST
+            User $SSH_USER
+            IdentityFile ~/.ssh/deploy.key
+            StrictHostKeyChecking no
+          END
         env:
-          DIR: ${{ secrets.PATH }}
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
-          key: ${{ secrets.KEY }}
-          envs: DIR
-          script: "cd $(echo $SSH_DIR | tr -d '\r') && git pull --tags origin release && git checkout $(git describe --tags $(git rev-list --tags --max-count=1)) && git status"
+          SSH_USER: ${{ secrets.USER }}
+          SSH_KEY: ${{ secrets.KEY }}
+          SSH_HOST: ${{ secrets.HOST }}
+
+      - name: Checkout latest tag
+        run: ssh deploy "cd $(echo $SSH_DIR | tr -d '\r') && git pull --tags origin release && git checkout $(git describe --tags $(git rev-list --tags --max-count=1)) && git status"
+        env:
+          SSH_DIR: ${{ secrets.PATH }}
