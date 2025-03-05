@@ -9,13 +9,16 @@ jobs:
     steps:
       - name: Pull latest tag via SSH
         uses: appleboy/ssh-action@v1.2.1
+        env:
+          DIR: ${{ secrets.PATH }}
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
+          envs: DIR
           script: |
-            cd ${{ secrets.PATH }}
+            cd $DIR
             git pull --tags origin release
             git checkout $(git describe --tags $(git rev-list --tags --max-count=1))
             git status
