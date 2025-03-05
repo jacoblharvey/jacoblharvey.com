@@ -4,18 +4,16 @@ on:
   release:
     types: [ published ]
 jobs:
-  Deploy:
+  deploy:
     runs-on: ubuntu-22.04
     steps:
-      - name: SSH
-        uses: appleboy/ssh-action@v1.2.0
+      - name: Pull latest tag via SSH
+        uses: appleboy/ssh-action@v1.2.1
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            cd ${{ secrets.PATH }}
-            git pull --tags origin release
-            git checkout $(git describe --tags $(git rev-list --tags --max-count=1))
-            git status
+            whoami
+            ls -al
