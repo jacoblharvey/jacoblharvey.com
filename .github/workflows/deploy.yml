@@ -26,6 +26,7 @@ jobs:
           SSH_HOST: ${{ secrets.HOST }}
 
       - name: Checkout latest tag
-        run: ssh deploy "cd $(echo $SSH_DIR | tr -d '\r') && git pull --tags origin release && git checkout $(git describe --tags $(git rev-list --tags --max-count=1)) && git status"
+        run: |
+          ssh deploy "cd $(echo $SSH_DIR | tr -d '\r') && git pull --tags origin release && git checkout \$(git describe --tags \$(git rev-list --tags --max-count=1)) ; git status"
         env:
           SSH_DIR: ${{ secrets.PATH }}
