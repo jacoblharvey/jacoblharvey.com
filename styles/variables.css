@@ -1,7 +1,7 @@
 :root {
   /* Hex codes */
   --white: #FFFFFF;
-  --isabelline: #F4F0EC;
+  --isabelline: #F7F4EE;
   --black: #000000;
   --eerie-black: #1B1B1B;
   --jet-black: #343434;
@@ -9,9 +9,22 @@
   --green: #34502F;
   --violet: #4B2F50;
   --brown: #503B2F;
+
+  --alabaster: #EEE8DC;
+  --melon: #FAC3BB; /* #FAC3BBA6 for transparency */
+  --raisin-black: #161929;
+  --magenta-haze: #A34D81;
+  --atomic-tangerine: #E69877;
+  --verdigris: #33ADA9;
+  --pistachio: #98C379;
+
   /* Semantic variables */
   --bg-color: var(--white);
-  --bg-accent-color: var(--isabelline);
+  --bg-accent-color: var(--alabaster);
+  --bg-accent-hover-color: var(--isabelline);
+  --bg-accent-click-color: var(--white);
   --text-color: var(--eerie-black);
   --shadow:rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+  --header-height: 48px;
+  --footer-height: 36px; 
 }

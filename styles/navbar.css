@@ -57,7 +57,7 @@ nav ul li a:hover {
 }
 
 .dropdown-button:hover {
-  background-color: var(--bg-color);
+  background-color: var(--bg-accent-hover-color);
   box-shadow: var(--shadow);
 }
 
@@ -95,7 +95,7 @@ nav ul li a:hover {
 }
 
 .dropdown-content a:hover {
-  background-color: var(--bg-color);
+  background-color: var(--bg-accent-hover-color);
 }
 
 .show {
@@ -109,6 +109,11 @@ nav ul li a:hover {
 }
 
 .highlight {
-  background-color: var(--bg-color);
+  background-color: var(--bg-accent-click-color);
+  box-shadow: var(--shadow);
+}
+
+.highlight:hover {
+  background-color: var(--bg-accent-click-color);
   box-shadow: var(--shadow);
 }
