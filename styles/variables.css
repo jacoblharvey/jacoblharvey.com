@@ -24,6 +24,7 @@
   --bg-accent-hover-color: var(--isabelline);
   --bg-accent-click-color: var(--white);
   --text-color: var(--eerie-black);
+  --text-accent-color: var(--atomic-tangerine);
   --shadow:rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
   --header-height: 48px;
   --footer-height: 36px; 

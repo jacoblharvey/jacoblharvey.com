@@ -22,7 +22,7 @@ body {
   font-size: 32px;
   font-weight: bold;
   text-align: center;
-  color: var(--green);
+  color: var(--text-accent-color);
 }
 
 .subtitle {
@@ -31,14 +31,13 @@ body {
   font-size: 24px;
   font-weight: bold;
   text-align: left;
-  color: var(--green);
+  color: var(--text-accent-color);
 }
 
 .separator {
     margin: 16px 0 0 0;
     border: none;
-    border-top: 4px double var(--green);
-    color: var(--green);
+    border-top: 4px double var(--text-accent-color);
     overflow: visible;
     height: 6px;
 }
