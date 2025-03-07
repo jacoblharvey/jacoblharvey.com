@@ -60,3 +60,24 @@ main {
 article {
   flex: 3;
 }
+
+@media screen and (max-width: 810px) {
+  main {
+    flex-direction: column;
+  }
+
+  article {
+    margin: 0 32px;
+  }
+
+	.contents,
+	.related {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 428px) {
+	article {
+    margin: 0 16px;
+  }
+}
