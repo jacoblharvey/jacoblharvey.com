@@ -1,26 +1,17 @@
 <!--#include virtual="common/document_head.html" -->
-  <link rel="stylesheet" href="/styles/navbar.css" />
-  <link rel="stylesheet" href="/styles/footer.css" />
-  <script src="/scripts/navbar.js" async></script>
+  <script src="/scripts/toc.js" async></script>
   <title>Jacob Harvey</title>
 </head>
-<body>
-  <header>
-    <!--#include virtual="common/navbar.html" -->
-  </header>
-  <main>
-      <div class="contents"></div> 
-      <article>
-        <div class="last-modified">
-          Last updated
-          <!--#config timefmt="%b %e, %Y" --><!--#echo var="LAST_MODIFIED" -->
-        </div>
-        <p>
-          This website is a work in progress. See <a href="pages/about.html">About</a> for more information.
-        </p>
-      </article>
-      <div class="related"></div>
-  </main>
-  <!--#include virtual="common/footer.html" -->
+<body id="home">
+<!--#include virtual="common/header.html"-->
+<main>
+  <div class="article-wrapper">
+    <article>
+      <!--#include virtual="common/last_modified.html"-->
+      <p>This website is a work in progress. See <a class="about" href="pages/about.html">About</a> to learn more.</p>
+    </article>
+  </div>
+</main>
+<!--#include virtual="common/footer.html" -->
 </body>
 </html>

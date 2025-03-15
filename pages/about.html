@@ -1,23 +1,15 @@
-<!--#include virtual="../common/document_head.html" -->
-  <link rel="stylesheet" href="/styles/navbar.css" />
-  <link rel="stylesheet" href="/styles/footer.css" />
-  <script src="/scripts/navbar.js" async></script>
-  <script src="/scripts/about.js" async></script>
-  <title>Jacob Harvey | About</title>
+<!--#include virtual="/common/document_head.html" -->
+  <script src="/scripts/toc.js" async></script>
+  <title>About</title>
 </head>
-<body>
-  <header>
-    <!--#include virtual="../common/navbar.html" -->
-  </header>
-  <main>
-    <div class="contents"></div> 
+<body id="about">
+<!--#include virtual="/common/header.html"-->
+<main>
+  <div class="article-wrapper">
     <article>
       <h1 class="title">About</h1>
       <div class="separator"></div>
-      <div class="last-modified">
-        Last updated 
-        <!--#config timefmt="%b %e, %Y" --><!--#echo var="LAST_MODIFIED" -->
-      </div>
+      <!--#include virtual="/common/last_modified.html"-->
       <p>
         This website is a term project for CSCE 464. The goal of this project 
         is to create a personal site that will evolve as I learn HTML, CSS, 
@@ -25,11 +17,11 @@
       </p>
       <p>
         Source code can be found on 
-        <a href="https://github.com/jharvey25/jacoblharvey.com" target="_blank">GitHub</a>.
+        <a href="https://github.com/jacoblharvey/jacoblharvey.com" target="_blank">GitHub</a>.
       </p>
     </article>
-    <div class="related"></div>
-  </main>
-  <!--#include virtual="../common/footer.html" -->
+  </div>
+</main>
+<!--#include virtual="/common/footer.html" -->
 </body>
 </html>
