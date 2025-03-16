@@ -494,7 +494,6 @@ blockquote > p:after {
   flex-direction: column;
 }
 
-/* TODO: Add newly created pages */
 #about a.about,
 #four-lines a.four-lines,
 #home a.home,
