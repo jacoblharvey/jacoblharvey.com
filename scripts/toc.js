@@ -51,7 +51,7 @@ document.documentElement.addEventListener("click", (event) => {
   }
 });
 
-// Close dropdown when esc is pressed
+// Close toc when esc is pressed
 document.documentElement.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && tableOfContents.classList.contains("show")) {
     hideToc();
