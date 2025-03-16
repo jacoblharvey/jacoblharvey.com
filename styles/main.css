@@ -320,6 +320,10 @@ main .contents nav ul li a:hover {
   margin-left: 48px;
 }
 
+.related > * {
+  border-left: 1px solid rgba(100, 100, 100, 0.15);
+}
+
 .related h2 {
 	margin: 0;
   font-size: 0.875rem;
