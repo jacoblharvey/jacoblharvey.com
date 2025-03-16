@@ -84,14 +84,73 @@ header nav .expanded {
   gap: 16px;
 }
 
-.expanded nav a {
+.expanded nav > a,
+.expanded .dropdown {
+  font-size: 0;
 	padding: 16px 8px;
-	color: var(--text-color);
-	text-decoration: none;
+}
+
+.expanded .dropdown {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.expanded nav a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--text-color);
 }
 
 .expanded nav a:hover {
   text-decoration: underline;
+}
+
+.expanded .dropdown button {
+  min-height: 24px;
+  min-width: 24px;
+  border: none;
+  background-color: var(--bg-accent-color);
+	cursor: pointer;
+  margin-left: 8px;
+  padding: 0;
+}
+
+.expanded .dropdown button svg {
+  display: inline-block;
+  user-select: none;
+  vertical-align: text-bottom;
+  transition: transform 0.4s
+}
+
+.expanded .dropdown-content {
+  z-index: 1;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  right: 0;
+  top: 32px;
+  width: 100%;
+  background-color: var(--bg-color);
+  border: 1px solid rgba(100, 100, 100, 0.25);
+  border-radius: 6px;
+  box-shadow: rgba(100, 100, 100, 0.04) 1px 1px 0px, rgba(255, 255, 255, 0.25) 1px 1px 0px inset;
+  transition: transform 0.4s;
+  transform: translateY(0);
+}
+
+.expanded .dropdown-content a {
+  display: block;
+  text-align: left;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  height: 42px;
+  /* border-bottom: 1px solid rgba(100, 100, 100, 0.15); */
+}
+
+.expanded .dropdown-content a:not(:last-of-type) {
+  border-bottom: 1px solid rgba(100, 100, 100, 0.25);
 }
 
 /* || Collapsed header nav */
@@ -365,6 +424,9 @@ blockquote > p:after {
   content: "\"";
 }
 
+/* || Four Lines Form */
+
+
 /* || Responsive */
 @media screen and (min-width: 544px) {
   .article-wrapper {
@@ -413,12 +475,28 @@ blockquote > p:after {
   width: 100%;
 }
 
+#dropdown-arrow.drop {
+  transform: rotate(180deg);
+}
+
+#dropdown-arrow:hover:not(.drop) {
+  transform: rotateY(180deg);
+}
+
+#dropdown-content.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(1rem);
+}
+
 #toc.show {
   display: flex;
   flex-direction: column;
 }
 
+/* TODO: Add newly created pages */
 #about a.about,
+#four-lines a.four-lines,
 #home a.home,
 #journal a.journal,
 #pages a.pages,
