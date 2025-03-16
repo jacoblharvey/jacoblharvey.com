@@ -374,14 +374,14 @@ article img {
 }
 
 article > .heading {
-  font-weight: 600;
+  font-size: clamp(1.4rem, 2.735vw + 0.47rem, 2.2rem);
   font-weight: bolder;
   margin: 0;
   text-align: center;
 }
 
 article > .subheading {
-  font-weight: 600;
+  font-size: clamp(1.2rem, 2.051vw + 0.503rem, 1.8rem);
   font-weight: bolder;
   margin: 0;
 }
