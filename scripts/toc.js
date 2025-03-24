@@ -16,8 +16,8 @@ const hideToc = () => {
 };
 
 const disableScroll = () => {
-  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
 
   window.onscroll = () => {
     window.scrollTo(scrollLeft, scrollTop);
