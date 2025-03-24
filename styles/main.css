@@ -564,6 +564,11 @@ blockquote {
   flex-direction: column;
 }
 
+#profile-img {
+  display: inline;
+  margin: 0;
+}
+
 /* Disable links to the current page */
 #about a.about,
 #four-lines a.four-lines,
