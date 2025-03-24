@@ -31,7 +31,6 @@ const initializePoem = () => {
   upButton.classList.add("hidden");
   charCount.classList.remove("hidden");
   charCount.textContent = "0/80";
-  // FIXME: focus on line1 doesn't work initially
 };
 
 const destroyPoem = () => {
