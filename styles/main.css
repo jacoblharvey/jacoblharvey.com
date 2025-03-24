@@ -430,7 +430,72 @@ blockquote {
 }
 
 /* || Four Lines Form */
+.form-wrapper {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
 
+.line-wrapper {
+  border-radius: 6px;
+}
+
+.line-wrapper input {
+  width: 100%;
+}
+
+.line-wrapper:disabled {
+  display: none;
+}
+
+.button-wrapper {
+  /* text-align: right; */
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-wrapper button {
+  min-height: 32px;
+  min-width: 32px;
+	border-radius: 6px;
+	border: 1px solid rgba(100, 100, 100, 0.25);
+	cursor: pointer;
+	user-select: none;
+	padding: 6px 12px;
+	background-color: var(--bg-color);
+	box-shadow: rgba(100, 100, 100, 0.04) 1px 1px 0px, rgba(255, 255, 255, 0.25) 1px 1px 0px inset;
+}
+
+.button-wrapper button svg {
+  display: inline-block;
+  user-select: none;
+  vertical-align: text-bottom;
+}
+
+.button-wrapper button:disabled {
+  cursor: default;
+}
+
+.button-wrapper #char-count {
+  margin-right: auto;
+  margin-left: 0;
+  color: var(--dim-gray);
+}
+
+.hidden {
+  display: none;
+}
+
+.button-wrapper #restart-button {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8px;
+}
+
+#poem {
+  text-align: center;
+}
 
 /* || Responsive */
 @media screen and (min-width: 544px) {

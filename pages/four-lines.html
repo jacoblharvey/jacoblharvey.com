@@ -1,0 +1,65 @@
+<!--#include virtual="/common/document_head.html" -->
+  <script type="module" src="/scripts/toc.js"></script>
+  <script type="module" src="/scripts/dropdown.js"></script>
+  <script type="module" src="/scripts/poem.js"></script>
+  <title>Four Lines | Jacob Harvey</title>
+</head>
+<body id="four-lines">
+<!--#include virtual="/common/header.html"-->
+<main>
+  <div class="article-wrapper">
+    <article>
+      <h1 class="heading">Four Lines</h1>
+      <div class="separator"></div>
+      <div class="quote">
+        <blockquote cite="https://www.youtube.com/watch?v=Fh9tMqpH8nc">
+          <q>
+            What I had to say to you, moreover, would not take long, to wit: 
+            Practice any art, music, singing, dancing, acting, drawing, painting, 
+            sculpting, poetry, fiction, essays, reportage, no matter how well or 
+            badly, not to get money and fame, but to experience becoming, to find 
+            out what&apos;s inside you, to make your soul grow.
+          </q>
+        </blockquote>
+        <p>- Kurt Vonnegut, <cite>Letter to students at Xavier High School</cite></p>
+      </div>
+      <h2 class="subheading">Here's an Assignment for Tonight</h2>
+      <p>Write a four line poem, about anything, but rhymed. No fair tennis without a net.</p>
+      <div class="form-wrapper">
+        <form id="four-lines-form">
+          <fieldset id="first-line" class=line-wrapper>
+            <legend>First Line</legend>
+            <input type="text" id="line1" name="line1" placeholder="Write anything..." minlength="1" maxlength="80" required/>
+          </fieldset>
+          <fieldset id="second-line" class=line-wrapper>
+            <legend>Second Line</legend>
+            <input type="text" id="line2" name="line2" placeholder="Write anything..." minlength="1" maxlength="80" required />
+          </fieldset>
+          <fieldset id="third-line" class=line-wrapper>
+            <legend>Third Line</legend>
+            <input type="text" id="line3" name="line3" placeholder="Write anything..." minlength="1" maxlength="80" required />
+          </fieldset>
+          <fieldset id="fourth-line" class=line-wrapper>
+            <legend>Fourth Line</legend>
+            <input type="text" id="line4" name="line4" placeholder="Write anything..." minlength="1" maxlength="80" required />
+          </fieldset>
+          <div class="button-wrapper">
+            <span id="char-count">0/80</span>
+            <button id="up-button" type="button">Previous Line</button>
+            <button id="down-button" type="button">Next Line</button>
+            <button id="finish-button" type="button">Finish</button>
+          </div>
+          <div class="button-wrapper">
+            <button id="restart-button" type="button" class="hidden">Write a New Poem</button>
+          </div>
+        </form>
+      </div>
+      <div id="poem">
+        <h2 class="subheading">Your Poem</h2>
+      </div>
+    </article>
+  </div>
+</main>
+<!--#include virtual="/common/footer.html" -->
+</body>
+</html>
